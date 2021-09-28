@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <title>Bling::Регистрация</title>
+</head>
+<body>
+<div class="content">
+    <div class="OfferBox">
+        <img src="LogoLogin.png" class="logo">
+        <h1>BLING - новая социальная сеть, чисто “для своих”.</h1>
+        <h1>Пройдите регистрацию и присоединяйтесь!</h1>
+        
+    </div>
+    <!--Начало блока с регистрацией-->
+    <div class="regblock"> 
+        <p class="EnterToAccount">Зарегистрируйтесь</p>
+        <form method="post">
+            <!-- {% csrf_token %}
+            {{ form.as_p }} -->
+            <p><input name="FirstName" id="" placeholder="Имя" class="loginform"></p>
+            <p><input name="" id="LastName" placeholder="Фамилия" class="loginform"></p>
+            <p><input name="e-mail" id="" placeholder="E-mail" class="loginform"></p>
+            <p><input type='password' name="password" id="" placeholder="Пароль" class="passwordform"></p>
+            <p><input type='password' name="password" id="" placeholder="Повторите пароль" class="passwordform"></p>
+            <!-- <input type="hidden" name="next" value="{{ next }}">
+            <input type="submit" value="Войти" class="EnterButton"> -->
+        </form>
+        
+        <!-- Чекбокс чтоб не выходить из учётки при закрытии сайта -->
+        <label class="container">Оставаться в системе
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+        </label>
+
+
+        <!-- {% if user.is_authenticated %}
+        <p class="EnterWarning">{{ user.username }}, вы уже выполнили вход</p><br>
+        <a href="{% url 'home' %}">Главная</a>
+        {% else %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{{ next }}">
+            <input type="submit" value="Войти" class="EnterButton">
+        </form>
+        {% endif %} -->
+
+
+        <!-- Кнопка входа и предложение регистрации -->
+        <input type="submit" value="Зарегистрироваться" class="EnterButton">
+        <div class="RegMessage">
+            <p class="FirstTime">Уже с нами?</p>
+            <a href="{% url 'signup' %}">Войти в учетную запись</a>
+        </div>
+        </div>
+</div>
+    <!--Конец блока с регистрацией-->
+<!-- Лого сайта внизу -->
+    <footer class="footer">
+        <img src="footer logo.png" alt="" class="FooterLogo">
+    </footer>
+</body>
+</html>
